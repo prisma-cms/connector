@@ -1,8 +1,8 @@
 {
   "name": "@prisma-cms/connector",
   "version": "1.0.0",
-  "description": "Describe @prisma-cms/connector here",
-  "main": "lib/index.js",
+  "description": "Connector for @prisma-cms",
+  "main": "src/index.js",
   "module": "es/index.js",
   "files": [
     "es",
@@ -17,13 +17,28 @@
     "test:coverage": "nwb test --coverage",
     "test:watch": "nwb test --server"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "nwb": "0.23.x"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Fi1osof",
+  "homepage": "https://github.com/prisma-cms/connector#readme",
   "license": "MIT",
-  "repository": ""
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [
+    "prisma-cms",
+    "front",
+    "connector",
+    "apollo-client",
+    "graphql"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prisma-cms/connector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prisma-cms/connector/issues"
+  }
 }
