@@ -3,5 +3,16 @@ module.exports = {
   npm: {
     esModules: true,
     umd: false
+  },
+  babel: {
+    "presets": [
+      "env",
+      "es2015",
+      "react",
+    ],
+    "plugins": [
+      "transform-runtime",
+      "transform-class-properties"
+    ]
   }
 }
