@@ -3,14 +3,25 @@ import PropTypes from 'prop-types'
 
 export default class PrismaCmsConnector extends Component {
 
-  
-  static contextTypes = {
+
+  static propTypes = {
     getQueryFragment: PropTypes.func.isRequired,
   }
 
 
-  shouldComponentUpdate(){
-    return false;
+  componentWillMount() {
+
+    const Query = this.prepareQuery();
+
+    this.Query = Query;
+
+  }
+
+
+  prepareQuery(){
+
+    console.error("You should override prepareQuery method.");
+    return null;
   }
 
 
@@ -20,10 +31,18 @@ export default class PrismaCmsConnector extends Component {
     const {
       ...other
     } = this.props;
-  
-    const Query = this.prepareQuery();
 
-    return <Query 
+
+    const Query = this.Query;
+
+    if (!Query) {
+
+      console.error("Query is null");
+
+      return null;
+    }
+
+    return <Query
       {...other}
     />;
 
