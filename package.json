@@ -1,6 +1,6 @@
 {
   "name": "@prisma-cms/connector",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Connector for @prisma-cms",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -17,9 +17,11 @@
     "test:coverage": "nwb test --coverage",
     "test:watch": "nwb test --server"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@prisma-cms/context": "latest"
+  },
   "devDependencies": {
-    "@prisma-cms/front": "^1.9.7-beta",
+    "@prisma-cms/front": "latest",
     "babel-plugin-transform-class-properties": "^6.11.5",
     "babel-plugin-transform-runtime": "^6.12.0",
     "babel-preset-env": "^1.7.0",

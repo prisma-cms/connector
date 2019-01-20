@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import Context from "@prisma-cms/context";
+
 export default class PrismaCmsConnector extends Component {
 
 
+  static contextType = Context;
+  
+
   static propTypes = {
-    getQueryFragment: PropTypes.func.isRequired,
+    getQueryFragment: PropTypes.func,
   }
 
 
